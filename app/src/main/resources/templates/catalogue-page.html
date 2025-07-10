@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КанцМаг - Карта сайта</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .page-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .page-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #4f46e5;
+            transition: width 0.3s ease;
+        }
+        .page-link:hover::after {
+            width: 100%;
+        }
+        .category-icon {
+            transition: transform 0.3s ease;
+        }
+        .category-card:hover .category-icon {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-indigo-700 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="" alt="Логотип КанцМаг - стилизованное изображение ручки и блокнота" class="h-10 w-10">
+                    <h1 class="text-2xl font-bold">КанцМаг</h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/stationaryshop/main" class="hover:text-indigo-200">Главная</a>
+                    <a href="/stationaryshop/main/catalogue" class="hover:text-indigo-200">Каталог</a>
+                    <a href="/stationaryshop/main/sales" class="hover:text-indigo-200">Акции</a>
+                    <a href="/stationaryshop/main/aboutus" class="hover:text-indigo-200">О нас</a>
+                    <a href="/stationaryshop/main/contacts" class="hover:text-indigo-200">Контакты</a>
+                </nav>
+                <button class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Catalog Header -->
+        <div class="flex flex-wrap justify-between items-center mb-8">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-800">Каталог товаров</h2>
+                <p class="text-gray-600 mt-2">Все категории канцелярских принадлежностей</p>
+            </div>
+            <div class="relative mt-4 md:mt-0">
+                <input type="text" placeholder="Поиск товаров..." class="px-4 py-2 border rounded-full pl-10 w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute left-3 top-2.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="mb-12">
+            <h3 class="text-xl font-semibold mb-4">Категории</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <a href="#" class="bg-white p-4 rounded-lg shadow-sm text-center hover:shadow-md transition">
+                    <img src="" alt="Ручки" class="mx-auto mb-2">
+                    <span class="font-medium">Ручки</span>
+                </a>
+                <a href="#" class="bg-white p-4 rounded-lg shadow-sm text-center hover:shadow-md transition">
+                    <img src="" alt="Карандаши" class="mx-auto mb-2">
+                    <span class="font-medium">Карандаши</span>
+                </a>
+                <a href="#" class="bg-white p-4 rounded-lg shadow-sm text-center hover:shadow-md transition">
+                    <img src="" alt="Тетради" class="mx-auto mb-2">
+                    <span class="font-medium">Тетради</span>
+                </a>
+                <a href="#" class="bg-white p-4 rounded-lg shadow-sm text-center hover:shadow-md transition">
+                    <img src="" alt="Бумага" class="mx-auto mb-2">
+                    <span class="font-medium">Бумага</span>
+                </a>
+                <a href="#" class="bg-white p-4 rounded-lg shadow-sm text-center hover:shadow-md transition">
+                    <img src="" alt="Папки" class="mx-auto mb-2">
+                    <span class="font-medium">Папки</span>
+                </a>
+                <a href="#" class="bg-white p-4 rounded-lg shadow-sm text-center hover:shadow-md transition">
+                    <img src="" alt="Прочее" class="mx-auto mb-2">
+                    <span class="font-medium">Прочее</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="mb-8">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-semibold">Популярные товары</h3>
+                <select class="border rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500">
+                    <option>Сортировать по</option>
+                    <option>Цена по возрастанию</option>
+                    <option>Цена по убыванию</option>
+                    <option>Популярности</option>
+                </select>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Product Card 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="relative">
+                        <img src="https://sdiskontom.ru/upload/iblock/2b8/5lme28sc6jgdezzsemrcfkmxp6bhsys9.jpg" alt="Ручка гелевая синяя" class="w-full">
+                        <div class="absolute top-2 right-2 bg-indigo-500 text-white text-xs px-2 py-1 rounded">
+                            Новинка
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-medium mb-1">Гелевая ручка синяя</h4>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 mr-2">
+                                ★★★★★
+                            </div>
+                            <span class="text-gray-500 text-sm">(24)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">59 ₽</span>
+                            <button class="bg-indigo-600 text-white p-1 rounded-full hover:bg-indigo-700 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                    <img src="https://market.rugby.ru/wp-content/uploads/2024/09/IMG_3338-400x400.jpg" alt="Тетрадь 48 листов" class="w-full">
+                    <div class="p-4">
+                        <h4 class="font-medium mb-1">Тетрадь 48 листов</h4>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 mr-2">
+                                ★★★★☆
+                            </div>
+                            <span class="text-gray-500 text-sm">(12)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">45 ₽</span>
+                            <button class="bg-indigo-600 text-white p-1 rounded-full hover:bg-indigo-700 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="relative">
+                        <img src="https://s.a-5.ru/p/b3/4a/b34a69b29ad040c8.jpg" alt="Блокнот А5" class="w-full">
+                        <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded">
+                            Хит продаж
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-medium mb-1">Блокнот А5 в клетку</h4>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 mr-2">
+                                ★★★★☆
+                            </div>
+                            <span class="text-gray-500 text-sm">(36)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">120 ₽</span>
+                            <button class="bg-indigo-600 text-white p-1 rounded-full hover:bg-indigo-700 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                    <img src="https://goods-photos.static1-sima-land.com/items/4453755/0/400.jpg?v=1596774336" alt="Пенал школьный" class="w-full">
+                    <div class="p-4">
+                        <h4 class="font-medium mb-1">Пенал школьный</h4>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 mr-2">
+                                ★★★★★
+                            </div>
+                            <span class="text-gray-500 text-sm">(42)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">190 ₽</span>
+                            <button class="bg-indigo-600 text-white p-1 rounded-full hover:bg-indigo-700 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                    <img src="https://icolorit.ru/wp-content/uploads/ofsetnaya-bumaga-01-1024x617.jpg" alt="Бумага А4" class="w-full">
+                    <div class="p-4">
+                        <h4 class="font-medium mb-1">Бумага А4, 500 листов</h4>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 mr-2">
+                                ★★★★☆
+                            </div>
+                            <span class="text-gray-5å00 text-sm">(15)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">350 ₽</span>
+                            <button class="bg-indigo-600 text-white p-1 rounded-full hover:bg-indigo-700 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">КанцМаг</h3>
+                    <p class="text-gray-300">Все для офиса, школы и творчества. Лучшие канцтовары по доступным ценам.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Каталог</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Бумага</a></li>
+                        <li><a href="#" class="hover:text-white">Ручки</a></li>
+                        <li><a href="#" class="hover:text-white">Карандаши</a></li>
+                        <li><a href="#" class="hover:text-white">Тетради</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Информация</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Оплата</a></li>
+                        <li><a href="#" class="hover:text-white">Доставка</a></li>
+                        <li><a href="#" class="hover:text-white">Возврат</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Контакты</h3>
+                    <address class="not-italic text-gray-300 space-y-2">
+                        <p>г. Москва, ул. Канцелярская, д.15</p>
+                        <p>+7 (495) 123-45-67</p>
+                        <p>info@kancmag.ru</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 КанцМаг. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Мобильное меню
+            const now = new Date();
+            const endDate = new Date();
+            endDate.setDate(now.getDate() + 12);
+            endDate.setHours(23, 59, 59, 0);
+            
+            const diff = endDate - now;
+            
+            if (diff <= 0) {
+                document.querySelector('.countdown').textContent = 'Акция завершена';
+                return;
+            }
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.querySelector('.countdown').textContent = `${days} дней ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Мобильное меню
+        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+            const nav = document.querySelector('nav.hidden');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('top-16');
+            nav.classList.toggle('right-4');
+            nav.classList.toggle('bg-indigo-800');
+            nav.classList.toggle('p-4');
+            nav.classList.toggle('rounded-lg');
+            nav.classList.toggle('space-y-3');
+        });
+    </script>
+</body>
+</html>

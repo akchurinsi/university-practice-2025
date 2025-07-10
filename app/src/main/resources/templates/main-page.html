@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КанцМаг - Карта сайта</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .page-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .page-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #4f46e5;
+            transition: width 0.3s ease;
+        }
+        .page-link:hover::after {
+            width: 100%;
+        }
+        .category-icon {
+            transition: transform 0.3s ease;
+        }
+        .category-card:hover .category-icon {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-indigo-700 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="https://placehold.co/40x40" alt="Логотип КанцМаг - стилизованное изображение ручки и блокнота" class="h-10 w-10">
+                    <h1 class="text-2xl font-bold">КанцМаг</h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/stationaryshop/main" class="hover:text-indigo-200">Главная</a>
+                    <a href="/stationaryshop/main/catalogue" class="hover:text-indigo-200">Каталог</a>
+                    <a href="/stationaryshop/main/sales" class="hover:text-indigo-200">Акции</a>
+                    <a href="/stationaryshop/main/aboutus" class="hover:text-indigo-200">О нас</a>
+                    <a href="/stationaryshop/main/contacts" class="hover:text-indigo-200">Контакты</a>
+                </nav>
+                <button class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Главная страница</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Навигация по всем разделам нашего интернет-магазина канцтоваров</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Главная страница -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden category-card">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://placehold.co/48x48" alt="Иконка дома для главной страницы" class="category-icon h-12 w-12 mr-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Главная страница</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Центральная страница магазина с акциями, новинками и специальными предложениями.</p>
+                    <a href="#" class="page-link text-indigo-600 font-medium inline-block">Перейти →</a>
+                </div>
+            </div>
+
+            <!-- Каталог товаров -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden category-card">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://placehold.co/48x48" alt="Иконка каталога товаров" class="category-icon h-12 w-12 mr-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Каталог товаров</h3>
+                    </div>
+                    <ul class="text-gray-600 mb-4 space-y-2">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Канцелярские товары
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Бумажная продукция
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Офисные принадлежности
+                        </li>
+                    </ul>
+                    <a href="#" class="page-link text-indigo-600 font-medium inline-block">Перейти →</a>
+                </div>
+            </div>
+
+            <!-- Акции и скидки -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden category-card">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://placehold.co/48x48" alt="Иконка процента для страницы акций" class="category-icon h-12 w-12 mr-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Акции и скидки</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Специальные предложения, сезонные распродажи и выгодные комплекты товаров со скидкой.</p>
+                    <div class="flex items-center text-indigo-600 font-medium">
+                        <span class="mr-2">До конца акции:</span>
+                        <span class="font-bold">12 дней 04:38:27</span>
+                    </div>
+                    <a href="#" class="page-link text-indigo-600 font-medium inline-block mt-4">Перейти →</a>
+                </div>
+            </div>
+
+            <!-- О компании -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden category-card">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://placehold.co/48x48" alt="Иконка здания для страницы о компании" class="category-icon h-12 w-12 mr-4">
+                        <h3 class="text-xl font-semibold text-gray-800">О компании</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Информация о нашем магазине, миссии, преимуществах и принципах работы.</p>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            История компании
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Наши преимущества
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Отзывы клиентов
+                        </li>
+                    </ul>
+                    <a href="#" class="page-link text-indigo-600 font-medium inline-block">Перейти →</a>
+                </div>
+            </div>
+
+            <!-- Контакты -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden category-card">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://placehold.co/48x48" alt="Иконка телефона и конверта для страницы контактов" class="category-icon h-12 w-12 mr-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Контакты</h3>
+                    </div>
+                    <ul class="text-gray-600 space-y-3 mb-4">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-0.5 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            г. Москва, ул. Канцелярская, д.15
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            +7 (495) 123-45-67
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            info@kancmag.ru
+                        </li>
+                    </ul>
+                    <a href="#" class="page-link text-indigo-600 font-medium inline-block">Перейти →</a>
+                </div>
+            </div>
+
+            <!-- Корзина и личный кабинет -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden category-card">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://placehold.co/48x48" alt="Иконка пользователя и корзины для личного кабинета" class="category-icon h-12 w-12 mr-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Личный кабинет</h3>
+                    </div>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Корзина и оформление заказа
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            История заказов
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Настройки профиля
+                        </li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition">Войти</a>
+                        <a href="#" class="px-4 py-2 border border-indigo-600 text-indigo-600 rounded-md hover:bg-indigo-50 transition">Регистрация</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">КанцМаг</h3>
+                    <p class="text-gray-300">Все для офиса, школы и творчества. Лучшие канцтовары по доступным ценам.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Каталог</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Бумага</a></li>
+                        <li><a href="#" class="hover:text-white">Ручки</a></li>
+                        <li><a href="#" class="hover:text-white">Карандаши</a></li>
+                        <li><a href="#" class="hover:text-white">Тетради</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Информация</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Оплата</a></li>
+                        <li><a href="#" class="hover:text-white">Доставка</a></li>
+                        <li><a href="#" class="hover:text-white">Возврат</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Контакты</h3>
+                    <address class="not-italic text-gray-300 space-y-2">
+                        <p>г. Москва, ул. Канцелярская, д.15</p>
+                        <p>+7 (495) 123-45-67</p>
+                        <p>info@kancmag.ru</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 КанцМаг. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Таймер обратного отсчета для акции
+        function updateCountdown() {
+            const now = new Date();
+            const endDate = new Date();
+            endDate.setDate(now.getDate() + 12);
+            endDate.setHours(23, 59, 59, 0);
+            
+            const diff = endDate - now;
+            
+            if (diff <= 0) {
+                document.querySelector('.countdown').textContent = 'Акция завершена';
+                return;
+            }
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.querySelector('.countdown').textContent = `${days} дней ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Мобильное меню
+        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+            const nav = document.querySelector('nav.hidden');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('top-16');
+            nav.classList.toggle('right-4');
+            nav.classList.toggle('bg-indigo-800');
+            nav.classList.toggle('p-4');
+            nav.classList.toggle('rounded-lg');
+            nav.classList.toggle('space-y-3');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КанцМаг - Карта сайта</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .page-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .page-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #4f46e5;
+            transition: width 0.3s ease;
+        }
+        .page-link:hover::after {
+            width: 100%;
+        }
+        .category-icon {
+            transition: transform 0.3s ease;
+        }
+        .category-card:hover .category-icon {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-indigo-700 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="" alt="Логотип КанцМаг - стилизованное изображение ручки и блокнота" class="h-10 w-10">
+                    <h1 class="text-2xl font-bold">КанцМаг</h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/stationaryshop/main" class="hover:text-indigo-200">Главная</a>
+                    <a href="/stationaryshop/main/catalogue" class="hover:text-indigo-200">Каталог</a>
+                    <a href="/stationaryshop/main/sales" class="hover:text-indigo-200">Акции</a>
+                    <a href="/stationaryshop/main/aboutus" class="hover:text-indigo-200">О нас</a>
+                    <a href="/stationaryshop/main/contacts" class="hover:text-indigo-200">Контакты</a>
+                </nav>
+                <button class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <!-- Promotions Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-3xl font-bold text-gray-800">Акции и специальные предложения</h1>
+            <p class="text-xl text-gray-600">Только сейчас - выгодные цены на лучшие канцтовары</p>
+        </div>
+
+        <!-- Current Promotions -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <div class="bg-gradient-to-r from-orange-100 to-amber-50 p-8 rounded-lg shadow-md">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <span class="bg-red-500 text-white text-sm px-2 py-1 rounded">Акция</span>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-2">Сезонная распродажа</h3>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-gray-500 text-sm">До конца акции:</div>
+                        <div class="text-xl font-bold text-indigo-600">12 дней 04:38:27</div>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-4">Скидки до 50% на все товары для школы. Только до 30 сентября.</p>
+                <a href="#" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Смотреть товары</a>
+            </div>
+
+            <div class="bg-gradient-to-r from-blue-100 to-indigo-50 p-8 rounded-lg shadow-md">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <span class="bg-indigo-500 text-white text-sm px-2 py-1 rounded">Новинка</span>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-2">Наборы со скидкой</h3>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-4">Собери свой идеальный комплект канцтоваров и получи скидку 30%.</p>
+                <a href="#" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Смотреть наборы</a>
+            </div>
+        </div>
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="relative">
+                        <img src="https://anytos.ru/upload/iblock/384/3848b7e0887523929051e397b73ec88c/0dad20d3100a984ba04071b58b1fc1a6.jpg" alt="Маркеры" class="category-icon 240-12 w-240 mr-4">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+                            50% Скидка
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-medium mb-1">Маркеры выделители, набор 4 цвета</h4>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 mr-2">
+                                ★★★★★
+                            </div>
+                            <span class="text-gray-500 text-sm">(18)</span>
+                        </div>
+                        <div class="flex items-baseline">
+                            <span class="text-gray-400 line-through mr-2">320 ₽</span>
+                            <span class="font-bold text-red-600">160 ₽</span>
+                        </div>
+                        <button class="mt-2 bg-indigo-600 text-white p-1 rounded-full hover:bg-indigo-700 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="relative">
+                        <img src="https://img.joomcdn.net/6437e5768b4d34f312f4654c70c1c522d18c3ed0_original.jpeg" alt="Наклейки" class="category-icon 240-12 w-240 mr-4">
+                        <div class="absolute top-2 right-2 bg-orange-500 text-white text-xs px-2 py-1 rounded">
+                            Распродажа
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-medium mb-1">Набор наклеек для заметок, 100 шт</h4>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 mr-2">
+                                ★★★★☆
+                            </div>
+                            <span class="text-gray-500 text-sm">(32)</span>
+                        </div>
+                        <div class="flex items-baseline">
+                            <span class="text-gray-400 line-through mr-2">150 ₽</span>
+                            <span class="font-bold text-red-600">75 ₽</span>
+                        </div>
+                        <button class="mt-2 bg-indigo-600 text-white p-1 rounded-full hover:bg-indigo-700 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="relative">
+                        <img src="https://vagonchikspb.ru/upload/iblock/495/4955f55c5c9f476c604bf3ed045b442c.jpg" alt="Ежедневник" class="category-icon 240-12 w-240 mr-4">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+                            30% Скидка
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-medium mb-1">Ежедневник А5 на 2024 год</h4>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 mr-2">
+                                ★★★★☆
+                            </div>
+                            <span class="text-gray-500 text-sm">(24)</span>
+                        </div>
+                        <div class="flex items-baseline">
+                            <span class="text-gray-400 line-through mr-2">450 ₽</span>
+                            <span class="font-bold text-red-600">315 ₽</span>
+                        </div>
+                        <button class="mt-2 bg-indigo-600 text-white p-1 rounded-full hover:bg-indigo-700 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">КанцМаг</h3>
+                    <p class="text-gray-300">Все для офиса, школы и творчества. Лучшие канцтовары по доступным ценам.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Каталог</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Бумага</a></li>
+                        <li><a href="#" class="hover:text-white">Ручки</a></li>
+                        <li><a href="#" class="hover:text-white">Карандаши</a></li>
+                        <li><a href="#" class="hover:text-white">Тетради</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Информация</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Оплата</a></li>
+                        <li><a href="#" class="hover:text-white">Доставка</a></li>
+                        <li><a href="#" class="hover:text-white">Возврат</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Контакты</h3>
+                    <address class="not-italic text-gray-300 space-y-2">
+                        <p>г. Москва, ул. Канцелярская, д.15</p>
+                        <p>+7 (495) 123-45-67</p>
+                        <p>info@kancmag.ru</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 КанцМаг. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Мобильное меню
+            const now = new Date();
+            const endDate = new Date();
+            endDate.setDate(now.getDate() + 12);
+            endDate.setHours(23, 59, 59, 0);
+            
+            const diff = endDate - now;
+            
+            if (diff <= 0) {
+                document.querySelector('.countdown').textContent = 'Акция завершена';
+                return;
+            }
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.querySelector('.countdown').textContent = `${days} дней ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Мобильное меню
+        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+            const nav = document.querySelector('nav.hidden');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('top-16');
+            nav.classList.toggle('right-4');
+            nav.classList.toggle('bg-indigo-800');
+            nav.classList.toggle('p-4');
+            nav.classList.toggle('rounded-lg');
+            nav.classList.toggle('space-y-3');
+        });
+    </script>
+</body>
+</html>

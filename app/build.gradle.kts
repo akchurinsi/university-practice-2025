@@ -9,6 +9,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+    war
 }
 
 repositories {
@@ -17,8 +18,30 @@ repositories {
 }
 
 dependencies {
+    // Use JUnit Jupiter for testing.
+    testImplementation(libs.junit.jupiter)
+
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
     // This dependency is used by the application.
+     // This dependency is used by the application.
     implementation(libs.guava)
+    implementation(libs.spring.context)
+    implementation(libs.spring.orm)
+    implementation(libs.hikari)
+    implementation(libs.jakarta.persistence.api)
+    implementation(libs.hibernate.hikaricp)
+    implementation(libs.hibernate.core)
+    implementation(libs.slf4j.api)
+    implementation(libs.logback.core)
+    implementation(libs.logback.classic)
+    implementation(libs.spring.data.jpa)
+    implementation(libs.spring.webmvc)
+    providedCompile(libs.jakarta.servlet)
+    implementation(libs.jackson.core)
+    runtimeOnly(libs.h2)
+    implementation(libs.thymeleaf)
+    implementation(libs.thymeleaf.spring)
 }
 
 testing {
@@ -41,4 +64,8 @@ java {
 application {
     // Define the main class for the application.
     mainClass = "ru.bsuedu.practice.App"
+}
+
+tasks.war {
+    archiveFileName.set("stationaryshop.war")
 }
